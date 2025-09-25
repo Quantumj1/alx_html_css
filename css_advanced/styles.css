@@ -1,5 +1,11 @@
 /* Existing styles above remain unchanged */
-
+.body {
+    font-family: source-sans-pro, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
 .membership-benefits {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -245,6 +251,13 @@ footer .social-links a {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
+    border-radius: 70px;
+}
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #bbb;
+    align-items: center;
 }
 
 .tutor-list {
