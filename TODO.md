@@ -1,0 +1,2 @@
+- [x] Add CSS grid styling to .tutor-list in css_advanced/styles.css to arrange tutor cards in one row four columns
+- [x] Test the layout by opening css_advanced/index.html in browser
