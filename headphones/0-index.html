@@ -9,13 +9,16 @@
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="#">HEADPHONES</a>
+        <div class="logo-image">
+          <img src="images/favicon.png" alt="headphone" srcset=""/>
+          <a class="logo" href="#">HEADPHONES</a>
+        </div>
         <nav class="main-nav" aria-label="Main navigation">
           <a href="#what">what we do</a>
           <a href="#results">our results</a>
           <a href="#contact">contact us</a>
+          <button class="mobile-toggle" aria-label="Open menu">☰</button>
         </nav>
-        <button class="mobile-toggle" aria-label="Open menu">☰</button>
       </div>
     </header>
 
@@ -57,7 +60,7 @@
           </article>
         </div>
       </section>
-
+<!-- results section -->
       <section id="results" class="results">
         <div class="results-bg" aria-hidden="true"></div>
         <div class="container results-inner">
@@ -65,10 +68,18 @@
           <p class="section-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
           <div class="grid stats">
-            <div class="stat">+2%<span>Lorem ipsum dolor</span></div>
-            <div class="stat">+2%<span>Lorem ipsum dolor</span></div>
-            <div class="stat">+2%<span>Lorem ipsum dolor</span></div>
-            <div class="stat">+2%<span>Lorem ipsum dolor</span></div>
+            <div class="stat">
+              +2%<span>Lorem ipsum dolor</span>
+            </div>
+            <div class="stat">
+              +2%<span>Lorem ipsum dolor</span>
+            </div>
+            <div class="stat">
+              +2%<span>Lorem ipsum dolor</span>
+            </div>
+            <div class="stat">
+              +2%<span>Lorem ipsum dolor</span>
+            </div>
           </div>
         </div>
       </section>
@@ -93,11 +104,19 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-left">© Headphones 2020</div>
-        <div class="footer-right">Social icons</div>
-      </div>
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="images/favicon.png" alt="Headphones">
+                <a class="logo" href="#">HEADPHONES</a>
+            </div>
+            <div class="social-links">
+                <a href="#facebook"><img src="images/facebook.png" alt="Facebook" width="20px"></a>
+                <a href="#twitter"><img src="images/tweets.png" alt="Twitter" width="20px"></a>
+                <a href="#instagram"><img src="images/insta.png" alt="Instagram" width="20px"></a>
+            </div>
+        </div>
+        
     </footer>
 
     <script>
