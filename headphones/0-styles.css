@@ -1,0 +1,202 @@
+/* 0-styles.css - Responsive landing page style */
+:root{
+  --nav-height:72px;
+  --dark:#071726;
+  --nav-dark:#061224;
+  --accent:#ff6b6b;
+  --muted:#7b8a98;
+  --container:1100px;
+  --radius:6px;
+  font-size:16px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:sans-open,sans-serif;
+  color:#10222b;
+  line-height:1.5;
+  background:#fff;
+}
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* Header */
+.site-header{
+  position:sticky;
+  top:0;
+  background:linear-gradient(180deg, rgba(6,18,36,0.85) 20%, rgba(4,23,38,1) 65%),
+  url('./images/01_headphones_desktop@2x.png') center/cover no-repeat;
+  z-index:30;
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:var(--nav-height);
+}
+
+.logo{
+  font-weight:700;color:#fff;text-decoration:none;letter-spacing:1px
+}
+.main-nav{
+  display:flex;
+  gap:24px
+}
+.main-nav a{
+  color:#dfeff6;text-decoration:none;font-size:14px
+}
+.mobile-toggle{
+  display:none;background:transparent;border:0;color:#fff;font-size:22px
+}
+
+/* Hero */
+.hero{
+  position:relative;
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+  color:#fff
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(6,18,36,0.85) 20%, rgba(4,23,38,1) 65%),
+  url('./images/01_headphones_desktop@2x.png') center/cover no-repeat;
+  filter:contrast(.95) grayscale(.05);
+  opacity:1;
+}
+
+.hero-inner{
+  position:relative;
+  text-align:center;
+  padding:80px 20px
+}
+.hero h1{
+  font-size:32px;
+  margin:0 0 8px;
+  font-weight:700;
+  line-height:1.2;
+}
+.lead{
+  margin:0 0 18px;
+  opacity:.95
+}
+.btn-primary{
+  display:inline-block;
+  background:var(--accent);
+  color:#fff;
+  padding:12px 26px;
+  border-radius:24px;
+  text-decoration:none;
+  margin:12px 0
+}
+.hero-copy{
+  max-width:720px;
+  margin:20px auto 0;
+  color:rgba(255,255,255,0.9)
+}
+
+/* What we do */
+.what{
+  padding:70px 20px 50px;
+  background:#fff;
+  text-align:center;
+  color:var(--dark)
+}
+.what h2{
+  font-size:22px;
+  margin-bottom:6px
+}
+.section-desc{
+  max-width:760px;
+  margin:14px auto 28px;
+  color:var(--muted)
+}
+
+.grid{
+  display:grid;
+  gap:28px
+}
+.features{
+  grid-template-columns:repeat(4,1fr);
+  align-items:start
+}
+.feature{
+  text-align:center;
+  padding:20px
+}
+.feature .icon{
+  width:64px;
+  height:64px;
+  display:block;
+  margin:0 auto 12px;
+  color:var(--accent)
+}
+.feature h3{
+  margin:8px 0 6px
+}
+.feature p{
+  color:var(--muted);
+  font-size:14px
+}
+
+/* Results */
+.results{
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  padding:80px 0
+}
+
+.results-bg{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(6,18,36,0.9) 10%, rgba(3,22,36,0.95) 60%), 
+  url('./images/01_headphones_desktop@2x.png') center/cover no-repeat;
+  opacity:1
+}
+
+.results-inner{
+  position:relative;
+  text-align:center;
+  padding:40px 20px}
+.stats{grid-template-columns:repeat(4,1fr);margin-top:32px}
+.stat{background:transparent;border-radius:8px;padding:20px;color:var(--accent);font-weight:700;font-size:22px;display:flex;flex-direction:column;align-items:center}
+.stat span{display:block;font-size:12px;color:rgba(255,255,255,0.9);font-weight:400;margin-top:8px}
+
+/* Contact */
+.contact{padding:70px 20px 90px;background:#fff;text-align:center}
+.contact-form{max-width:420px;margin:22px auto 0;display:flex;flex-direction:column;gap:12px}
+.contact-form input,.contact-form textarea{border:0;border-bottom:1px solid #ddd;padding:10px 8px;outline:0}
+.contact-form input:focus,.contact-form textarea:focus{border-bottom-color:var(--accent)}
+
+/* Footer */
+.site-footer{background:var(--nav-dark);color:#c6d8e1;padding:26px 0}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+
+/* small helpers */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Responsive */
+@media (max-width:980px){
+  .features{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:28px}
+}
+@media (max-width:640px){
+  .main-nav{position:fixed;right:0;top:var(--nav-height);background:rgba(2,12,20,.95);height:calc(100% - var(--nav-height));width:260px;transform:translateX(100%);transition:transform .28s ease;flex-direction:column;padding:18px}
+  .main-nav.open{transform:translateX(0)}
+  .mobile-toggle{display:block}
+  .header-inner{padding:0 12px}
+  .features{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}
+  .hero{min-height:56vh}
+  .hero h1{font-size:20px}
+  .hero-copy{font-size:14px}
+}

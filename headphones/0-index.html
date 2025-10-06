@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Headphones — Landing</title>
+    <link rel="stylesheet" href="0-styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#">HEADPHONES</a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#what">what we do</a>
+          <a href="#results">our results</a>
+          <a href="#contact">contact us</a>
+        </nav>
+        <button class="mobile-toggle" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
+          <p class="lead">Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+          <a class="btn-primary" href="#contact">CALL TO ACTION</a>
+          <p class="hero-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </section>
+
+      <section id="what" class="what container">
+        <h2>What we do…</h2>
+        <p class="section-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <div class="grid features">
+          <article class="feature">
+            <svg viewBox="0 0 64 64" class="icon" aria-hidden="true"><path d="M32 12 L44 24 L32 36 L20 24 Z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </article>
+          <article class="feature">
+            <svg viewBox="0 0 64 64" class="icon" aria-hidden="true"><rect x="16" y="16" width="32" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </article>
+          <article class="feature">
+            <svg viewBox="0 0 64 64" class="icon" aria-hidden="true"><path d="M18 42 C28 20, 36 20, 46 42" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </article>
+          <article class="feature">
+            <svg viewBox="0 0 64 64" class="icon" aria-hidden="true"><circle cx="32" cy="32" r="10" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="results" class="results">
+        <div class="results-bg" aria-hidden="true"></div>
+        <div class="container results-inner">
+          <h2>Our results speak for themselves</h2>
+          <p class="section-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+          <div class="grid stats">
+            <div class="stat">+2%<span>Lorem ipsum dolor</span></div>
+            <div class="stat">+2%<span>Lorem ipsum dolor</span></div>
+            <div class="stat">+2%<span>Lorem ipsum dolor</span></div>
+            <div class="stat">+2%<span>Lorem ipsum dolor</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact container">
+        <h2>Contact us</h2>
+        <form class="contact-form" action="#" method="post" novalidate>
+          <label>
+            <span class="sr-only">Name</span>
+            <input type="text" name="name" placeholder="Name" required />
+          </label>
+          <label>
+            <span class="sr-only">Email</span>
+            <input type="email" name="email" placeholder="Email" required />
+          </label>
+          <label>
+            <span class="sr-only">Message</span>
+            <textarea name="message" placeholder="Your message" rows="4"></textarea>
+          </label>
+          <button class="btn-primary" type="submit">CALL TO ACTION</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">© Headphones 2020</div>
+        <div class="footer-right">Social icons</div>
+      </div>
+    </footer>
+
+    <script>
+      // small mobile toggle
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.querySelector('.mobile-toggle');
+        var nav = document.querySelector('.main-nav');
+        btn.addEventListener('click', function () { nav.classList.toggle('open'); });
+      });
+    </script>
+  </body>
+</html>
